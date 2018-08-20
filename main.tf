@@ -10,3 +10,12 @@ data "terraform_remote_state" "network" {
     region = "eu-west-1"
   }
 }
+
+resource "aws_s3_bucket" "cleanlyer-images" {
+  bucket = "cleanlyer-images"
+  acl    = "public-read"
+
+  tags {
+    Name        = "Cleanlyer Images"
+  }
+}
