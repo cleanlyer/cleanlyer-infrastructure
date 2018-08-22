@@ -13,9 +13,9 @@ data "terraform_remote_state" "network" {
 
 resource "aws_s3_bucket" "cleanlyer-images" {
   bucket = "cleanlyer-images"
-  acl    = "public-read"
+  acl = "public-read"
 
   tags {
-    Name        = "Cleanlyer Images"
+    Name = "Cleanlyer Images"
   }
 }
